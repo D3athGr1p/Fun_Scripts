@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bigint-buffer": "^1.1.5",
+    "blake2": "^5.0.0",
+    "blake2b": "^2.1.4",
+    "blakejs": "^1.2.1",
+    "uint64be": "^3.0.0"
+  }
+}
