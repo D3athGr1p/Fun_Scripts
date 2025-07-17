@@ -45,13 +45,15 @@ function autolykos2_hashes(coinbaseBuffer, height) {
     const f = J.map((item) => BigIntBuffer.toBigIntBE(blake2b(Buffer.concat([item, h, M])).slice(1, 32))).reduce((a, b) => a + b);
     const hash = BigIntBuffer.toBufferBE(f, 32);
 
+    console.log("i:", i.toString('hex'));
+
     return [hash, blake2b(hash)];
 }
 
 // reverse nonce
 
-const input_hex = "90a26d63579a13ce5b27a3bbe127c99ac280376785060ff76ca2f8efaf15eb37fa7030ed181f2ddf";
-const height = 281252;
+const input_hex = "1d83eff4921be239c252bdddb62ded364403808857c138f0a323e0dbc568c857639e221bfcee7c37";
+const height = 614400;
 
 const buf = Buffer.from(input_hex, 'hex');
 

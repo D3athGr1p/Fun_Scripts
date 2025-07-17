@@ -6,7 +6,7 @@ function blake2b256(input) {
     return Buffer.from(hash).toString('hex');
 }
 
-const SERIALIZING_HEADER = '05000000750dcadd37aa87e07f692353934bb6f117822a104d6a8a37efbf990100000000cf1c310ead602336e6cc7ab0edde8a24ff4d6da6ebbd6dc68909f71ff8fa4e73ff6fd366cacd0f1ca44a0400';
+const SERIALIZING_HEADER = '05000000c26f887941887839a04632b10553f8b2a7de89c0088abde224b8a0734b0a0000118d8a17bf8fec71a021e1bfeaab44236d05c424dcf22320e96c9504fe6f509599d0d066ffff0f1e500a0400';
 const hash = blake2b256(SERIALIZING_HEADER);
 console.log('MSG Hash:', hash);
 

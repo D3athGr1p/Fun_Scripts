@@ -75,7 +75,7 @@ def get_without_nonce(msg):
 
     return [without_extra_data, nNewNonce_b, reversed_aHeight_int]
 
-header = "05000000750dcadd37aa87e07f692353934bb6f117822a104d6a8a37efbf990100000000cf1c310ead602336e6cc7ab0edde8a24ff4d6da6ebbd6dc68909f71ff8fa4e73ff6fd366cacd0f1c0000000049c59fd607212ddfa44a0400"
+header = "050000005e19edaad6b404136c632248d74966208bfd820437a669cdb3e24a000000000092987d09de131195805d47b969acb17069a744e956ef82cc7b75834bb59b6f2d3685146835da001c00000000377ceefc1b229e6300600900"
 if (header[:8] == "05000000"):
     [header_without_nonce, nNewNonce, height] = get_without_nonce(header)
     msg = generate_message(header_without_nonce)
